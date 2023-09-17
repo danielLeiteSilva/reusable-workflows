@@ -37,4 +37,4 @@ jobs:
       - name: "👨‍💻 Install stryker"
         run: "npm install --save-dev @stryker-mutator/core"
       - name: "⌨️ Execute Mutation"
-        run: "stryker run --logLevel trace"
+        run: "stryker run"
