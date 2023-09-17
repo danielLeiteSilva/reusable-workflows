@@ -32,7 +32,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: "Build"
+        run: "npm install"
       - name: "👨‍💻 Install stryker"
         run: "npm install --save-dev @stryker-mutator/core"
       - name: "⌨️ Execute Mutation"
-        run: "npx stryker run"
+        run: "stryker run --logLevel trace"
