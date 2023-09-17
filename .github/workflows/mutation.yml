@@ -1,7 +1,4 @@
 name: Mutation Test CI
-
-run-name: ${{github.actor}} execute this job
-
 on:
   workflow_call:
 
