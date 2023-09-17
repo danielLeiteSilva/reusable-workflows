@@ -33,6 +33,6 @@ jobs:
         with:
           node-version: 18
       - name: "👨‍💻 Install stryker"
-        run: "npm install -g stryker-cli"
+        run: "npm install --save-dev @stryker-mutator/core"
       - name: "⌨️ Execute Mutation"
-        run: "stryker run"
+        run: "npx stryker run"
