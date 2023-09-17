@@ -1,5 +1,9 @@
 name: Mutation Test CI
-on: [push]
+
+run-name: ${{github.actor}} execute this job
+
+on:
+  workflow_call:
 jobs:
   clear-cache:
     runs-on: ubuntu-latest
