@@ -1,5 +1,5 @@
 name: Mutation Test CI
-on: [push]
+on: []
 jobs:
   clear-cache:
     runs-on: ubuntu-latest
