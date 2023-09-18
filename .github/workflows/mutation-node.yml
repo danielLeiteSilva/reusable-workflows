@@ -23,15 +23,18 @@ jobs:
               })
             }
             console.log("Clear completed")
-
+  
   mutation-test-v1:
     runs-on: ubuntu-latest
+    container:
+      image: node:18.13
+      env:
+        NODE_ENV: development
+      ports:
+        - 80
+      options: --cpus 1
     steps:
       - uses: actions/checkout@v2
-      - name: Set node js 18
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
       - name: "👨‍💻 Install stryker"
         run: "npm install --save-dev @stryker-mutator/core"
       - name: "⌨️ Execute Mutation"
