@@ -32,7 +32,7 @@ jobs:
         NODE_ENV: development
       ports:
         - 80
-      options: --cpus 4
+      options: --cpus 2
     steps:
       - name: "Checkout version"
         uses: actions/checkout@v2
