@@ -25,6 +25,7 @@ jobs:
             console.log("Clear completed")
   
   mutation-test-v1:
+    needs: clear-cache
     runs-on: ubuntu-latest
     container:
       image: node:18.13
