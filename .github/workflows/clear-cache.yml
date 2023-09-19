@@ -8,4 +8,4 @@ jobs:
       - name: Clear cache
         uses: actions/github-script@v6
       - name: Run script
-        run: scripts/index.js
+        run: ./index.js
