@@ -3,13 +3,7 @@ on:
   workflow_call:
 jobs:
   clear-cache:
-    runs-on: ubuntu-latest
-    steps:
-      - name: "Checkout version"
-        uses: actions/checkout@v2
-      - name: 'Carregar Script'
-        uses: ./scripts/index.js  
-  
+    uses: danielLeiteSilva/reusable-workflows/.github/workflows/clear-cache.yml@main
   mutation-test-v1:
     needs: clear-cache
     runs-on: ubuntu-latest

@@ -1,0 +1,11 @@
+name: Clear Cache
+on:
+  workflow_call:
+jobs:
+  clear-cache:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout version"
+        uses: actions/checkout@v2
+      - name: 'Carregar Script'
+        uses: ./scripts/index.js  
